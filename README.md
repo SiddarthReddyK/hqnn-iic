@@ -54,7 +54,7 @@ graph TD
 ### Folder Structure
 
 ```text
-hqnn-iim/
+hqnn-iic/
 ├── data/
 │ ├── raw/
 │ └── processed/
