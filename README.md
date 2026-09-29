@@ -1,4 +1,4 @@
-# Hybrid Quantum Neural Network for Intelligent Image Classification (HQNN-IIM)
+# Hybrid Quantum Neural Network for Intelligent Image Classification (HQNN-IIC)
 
 > A hybrid quantum-classical framework for image classification, combining quantum feature encoding and variational quantum circuits with classical optimization — compatible with current NISQ-era hardware.
 
@@ -11,6 +11,7 @@
 Classical deep learning models for image classification demand heavy compute and long training times, and scaling becomes harder as datasets grow. Quantum computing offers an alternative route via superposition and entanglement, but current hardware is still limited (NISQ era).
 
 This project explores a Hybrid Quantum Neural Network (QNN) that:
+
 - Encodes classical image features into quantum states
 - Learns feature representations via a variational quantum circuit
 - Updates parameters using classical optimization, keeping the approach practical on today's hardware
@@ -50,15 +51,52 @@ graph TD
 
 ---
 
+### Folder Structure
+
+hqnn-iim/
+├── data/
+│ ├── raw/
+│ └── processed/
+├── notebooks/
+│ ├── 01_eda.ipynb
+│ └── 02_quantum_circuits.ipynb
+├── src/
+│ ├── data/
+│ │ ├── **init**.py
+│ │ └── loader.py
+│ ├── quantum/
+│ │ ├── **init**.py
+│ │ ├── encoding.py
+│ │ └── qnn.py
+│ ├── models/
+│ │ ├── **init**.py
+│ │ ├── cnn.py
+│ │ └── svm.py
+│ ├── training/
+│ │ ├── **init**.py
+│ │ └── train.py
+│ └── evaluation/
+│ │ ├── **init**.py
+│ │ └── metrics.py
+├── tests/
+│ ├── test_encoding.py
+│ └── test_models.py
+├── scripts/
+│ └── run_pipeline.py
+├── README.md
+└── requirements.txt
+
+---
+
 ## Tech Stack
 
-| Tool | Purpose |
-|---|---|
-| [Qiskit](https://qiskit.org/) | Quantum circuit design & simulation |
-| Python | Core implementation & pipeline |
-| Matplotlib | Visualization & result plotting |
-| scikit-learn / PyTorch or TensorFlow | Classical baselines (CNN, SVM) |
-| NumPy | Numerical processing |
+| Tool                                 | Purpose                             |
+| ------------------------------------ | ----------------------------------- |
+| [Qiskit](https://qiskit.org/)        | Quantum circuit design & simulation |
+| Python                               | Core implementation & pipeline      |
+| Matplotlib                           | Visualization & result plotting     |
+| scikit-learn / PyTorch or TensorFlow | Classical baselines (CNN, SVM)      |
+| NumPy                                | Numerical processing                |
 
 ---
 
@@ -76,4 +114,3 @@ The model will be evaluated and compared against CNN and SVM baselines on:
 > Results are pending — this project is currently in development.
 
 ---
-
