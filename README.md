@@ -116,7 +116,3 @@ The model will be evaluated and compared against CNN and SVM baselines on:
 > Results are pending — this project is currently in development.
 
 ---
-
-```
-
-```
