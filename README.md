@@ -77,6 +77,3 @@ The model will be evaluated and compared against CNN and SVM baselines on:
 
 ---
 
-## License
-
-*(Add a license, e.g. MIT, once decided.)*
